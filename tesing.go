@@ -1,7 +1,7 @@
-package main
+package main //indicates file belongs to an executable program
 
 import "fmt"
 
-func main() {
-	fmt.Println("Hello from Go in VS Code! This is Hannah starting Golang :)")
+func test() {
+	fmt.Print("Hello from Go in VS Code! This is Hannah starting Golang :)")
 }
