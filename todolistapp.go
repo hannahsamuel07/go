@@ -13,7 +13,10 @@ func main() {
 	fmt.Println(("##### Welcome to our Todolist App! #####"))
 	printTask(taskItem, maxItems)
 	fmt.Println()
-	addTask(taskItem, "Go for a run")
+	//update list with new tasks
+	taskItem = addTask(taskItem, "Go for a run")
+	taskItem = addTask(taskItem, "Practice coding in Go")
+
 	fmt.Println()
 	printTask(taskItem, 20)
 }
@@ -28,7 +31,10 @@ func printTask(taskItem []string, itemLimit int) {
 	}
 
 }
-func addTask(taskItem []string, newTask string) {
+
+// inputs expected					//type of output expected
+func addTask(taskItem []string, newTask string) []string {
 	var updatedTaskItems = append(taskItem, newTask)
-	printTask(updatedTaskItems, 20)
+	//printTask(updatedTaskItems, 20)
+	return updatedTaskItems
 }
